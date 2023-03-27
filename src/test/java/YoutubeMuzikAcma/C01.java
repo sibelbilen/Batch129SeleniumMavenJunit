@@ -13,11 +13,11 @@ public class C01 {
         WebDriver driver=new ChromeDriver();
         driver.get("http://www.youtube.com");
      WebElement aramaKutusu= driver.findElement(By.xpath("//input[@id='search']"));
-     aramaKutusu.sendKeys("ceylan");
+     aramaKutusu.sendKeys("Dua Lipa");
      aramaKutusu.submit();
 
- driver.findElement(By.xpath("//a[@id='video-title']")).click();
-
+ WebElement acmaButonu=driver.findElement(By.xpath("//*[@id='video-title'][1]"));
+acmaButonu.submit();
 
     }
 }
